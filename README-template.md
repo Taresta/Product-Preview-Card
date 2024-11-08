@@ -16,7 +16,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -31,13 +30,6 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -53,31 +45,28 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
+I was having a bit of a trouble in making the image span its entire container for the desktop design. The width was not an issue, but the height of the image was not covering the entire picture element, which must hve stretched due to the default nature of grid child elements that follow the align-items: stretch property. So, by making the picture element itself a flex container, I was able to make its child, which is the image element cover its entire height, again due to the very same property.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I also had to experiment a bit regarding the width of the main element which I have set up using the clamp property to make it responsive. I learned that the value that goes in the middle is the ideal value. If this value is greater than the highest value, then the highest value we have set up will be used and if it is lower than th lowest value than the width will become equal to the latter.
 
-To see how you can add code snippets, see below:
+There was a bit of issue in the synchronization of the picture element and the media queries. If you will see in the picture element, I have set the mobile size picture for width upto 767px max and the desktop for width 768px min. However, the media queries for desktop design start from min-width: 767px. So, yeah there is a bit of mis-alignmenet of a pixel here, but this working for the best, so I went along with it.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<picture>
+      <source srcset="./images/image-product-mobile.jpg" media="(max-width: 767px)">
+      <source srcset="./images/image-product-desktop.jpg" media="(min-width:768px)">
+      <img src="./images/image-product-desktop.jpg" alt="Image of perfume bottle" class="image-perfume-bottle"/>
+</picture>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.product-card {
+    max-width: clamp(19rem, 70%, 39rem);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
