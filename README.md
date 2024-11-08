@@ -28,14 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/Screenshot_desktop.png)
+![Desktop](./design/Screenshot_desktop.png)
 
-![](./design/Screenshot_mobile.png)
+![Mobile](./design/Screenshot_mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-product-preview-card-tbjuUSuxh0)
+- Live Site URL: [Live Site URL](https://taresta.github.io/Product-Preview-Card/)
 
 ## My process
 
@@ -84,4 +84,4 @@ Continue learning responsive design and media queries.
 - Frontend Mentor - [Paradox](https://www.frontendmentor.io/profile/Taresta)
 
 ## Acknowledgments
-Thanks to all the great resources out there and thank to my teacher.
+Thanks to all the great resources out there and thanks to my teacher.
