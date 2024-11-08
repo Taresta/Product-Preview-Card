@@ -81,6 +81,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: var(--spacing-small);
+    cursor:pointer;
 }
 
 button:hover {
